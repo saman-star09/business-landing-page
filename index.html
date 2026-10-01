@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AYRA — Modesty, Reimagined.</title>
+<meta name="description" content="AYRA is a contemporary modest fashion label: timeless silhouettes, modern tailoring and effortless everyday elegance.">
+<meta name="theme-color" content="#23483A">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!--
+  IMAGERY: every photo slot is an <img> pointing at assets/img/<name>.jpg.
+  Until a file exists, a tonal silhouette placeholder shows through. Drop in
+  photography with the same filenames (see assets/img/README.md).
+-->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="sil-abaya" viewBox="0 0 200 400"><path d="M100 28c14 0 24 11 24 26 0 8-3 14-7 19 18 6 33 20 37 44l22 255c1 8-5 14-13 14H37c-8 0-14-6-13-14l22-255c4-24 19-38 37-44-4-5-7-11-7-19 0-15 10-26 24-26z"/></symbol>
+    <symbol id="sil-dress" viewBox="0 0 200 400"><path d="M100 30c13 0 22 10 22 24 0 9-4 15-9 20l14 36c3 8 1 14-4 20l-6 8 36 224c1 7-4 12-11 12H58c-7 0-12-5-11-12l36-224-6-8c-5-6-7-12-4-20l14-36c-5-5-9-11-9-20 0-14 9-24 22-24z"/></symbol>
+    <symbol id="sil-coord" viewBox="0 0 200 400"><path d="M100 30c13 0 22 10 22 24 0 8-3 14-8 18 20 5 36 16 40 36l6 70-26 6-6-40-4 56 18 150c1 6-3 10-9 10h-26l-3-110-4 110H80l-3-110-4 110H47c-6 0-10-4-9-10l18-150-4-56-6 40-26-6 6-70c4-20 20-31 40-36-5-4-8-10-8-18 0-14 9-24 22-24z"/></symbol>
+    <symbol id="sil-hijab" viewBox="0 0 200 400"><path d="M100 40c34 0 56 26 56 62 0 24-8 40-18 54 22 12 34 34 38 62l8 182H16l8-182c4-28 16-50 38-62-10-14-18-30-18-54 0-36 22-62 56-62z"/></symbol>
+    <symbol id="sil-bag" viewBox="0 0 200 200"><path d="M40 80h120l12 90H28z"/><path d="M70 80c0-36 60-36 60 0" fill="none" stroke="currentColor" stroke-width="6"/></symbol>
+  </defs>
+</svg>
+
+<!-- NAV -->
+<header class="nav" id="nav">
+  <div class="nav__inner">
+    <button class="nav__burger" id="burger" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
+    <nav class="nav__links" id="navLinks" aria-label="Primary">
+      <a href="#collection">New In</a>
+      <a href="#categories">Abayas</a>
+      <a href="#categories">Dresses</a>
+      <a href="#categories">Co-ords</a>
+      <a href="#categories">Hijabs</a>
+      <a href="#look">Collections</a>
+      <a href="#story">Our Story</a>
+    </nav>
+    <a href="#top" class="nav__logo" aria-label="AYRA home">AYRA</a>
+    <div class="nav__actions">
+      <button aria-label="Search"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 5 5"/></svg><span>Search</span></button>
+      <button aria-label="Account"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c1-4.5 4.5-6.5 8-6.5s7 2 8 6.5"/></svg><span>Account</span></button>
+      <button aria-label="Bag" id="bagBtn"><svg viewBox="0 0 24 24"><path d="M5 8h14l1 13H4z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg><span>Bag</span><b class="bag-count" id="bagCount">0</b></button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- HERO -->
+<section class="hero">
+  <div class="img hero__img" data-sil="abaya" data-tone="green">
+    <img src="assets/img/hero.jpg" alt="Model wearing an ivory and green tailored abaya" onerror="this.remove()">
+  </div>
+  <div class="hero__shade"></div>
+  <div class="hero__content">
+    <p class="eyebrow reveal">Autumn / Winter Collection</p>
+    <h1 class="hero__brand reveal">AYRA</h1>
+    <p class="hero__tag reveal">Modesty, Reimagined.</p>
+    <p class="hero__sub reveal">Timeless pieces designed for women who want elegance without compromise.</p>
+    <div class="hero__btns reveal">
+      <a href="#collection" class="btn btn--ivory">Shop New Arrivals</a>
+      <a href="#categories" class="btn btn--ghost">Explore the Collection</a>
+    </div>
+  </div>
+  <a href="#collection" class="hero__scroll" aria-label="Scroll down"><span>Scroll</span><i></i></a>
+</section>
+
+<!-- NEW COLLECTION -->
+<section class="section" id="collection">
+  <div class="wrap">
+    <header class="section__head reveal">
+      <p class="eyebrow">New In</p>
+      <h2>The New Collection</h2>
+      <p class="lede">Designed for the moments that matter.</p>
+    </header>
+    <div class="products">
+      <article class="product reveal" data-name="Sahara Abaya" data-price="8500">
+        <div class="product__media">
+          <div class="img" data-sil="abaya" data-tone="sand"><img src="assets/img/sahara-abaya.jpg" alt="Sahara Abaya" loading="lazy" onerror="this.remove()"></div>
+          <span class="tag">New</span>
+          <div class="product__actions"><button class="qv">Quick View</button><button class="add">Add to Bag</button></div>
+        </div>
+        <div class="product__info"><h3>Sahara Abaya</h3><p class="price">KSh 8,500</p></div>
+        <ul class="swatches" aria-label="Available colours"><li style="--c:#23483A" title="Forest"></li><li style="--c:#1F1D1A" title="Onyx"></li><li style="--c:#B79B79" title="Dune"></li></ul>
+      </article>
+      <article class="product reveal" data-name="Lina Co-Ord Set" data-price="6800">
+        <div class="product__media">
+          <div class="img" data-sil="coord" data-tone="clay"><img src="assets/img/lina-coord.jpg" alt="Lina Co-Ord Set" loading="lazy" onerror="this.remove()"></div>
+          <div class="product__actions"><button class="qv">Quick View</button><button class="add">Add to Bag</button></div>
+        </div>
+        <div class="product__info"><h3>Lina Co-Ord Set</h3><p class="price">KSh 6,800</p></div>
+        <ul class="swatches"><li style="--c:#E2D5BF" title="Oat"></li><li style="--c:#23483A" title="Forest"></li></ul>
+      </article>
+      <article class="product reveal" data-name="Noor Pleated Dress" data-price="7200">
+        <div class="product__media">
+          <div class="img" data-sil="dress" data-tone="green"><img src="assets/img/noor-dress.jpg" alt="Noor Pleated Dress" loading="lazy" onerror="this.remove()"></div>
+          <span class="tag">Bestseller</span>
+          <div class="product__actions"><button class="qv">Quick View</button><button class="add">Add to Bag</button></div>
+        </div>
+        <div class="product__info"><h3>Noor Pleated Dress</h3><p class="price">KSh 7,200</p></div>
+        <ul class="swatches"><li style="--c:#C9A98A" title="Sand"></li><li style="--c:#7A3F2B" title="Terracotta"></li><li style="--c:#1F1D1A" title="Onyx"></li></ul>
+      </article>
+      <article class="product reveal" data-name="Amara Kimono" data-price="5900">
+        <div class="product__media">
+          <div class="img" data-sil="abaya" data-tone="ivory"><img src="assets/img/amara-kimono.jpg" alt="Amara Kimono" loading="lazy" onerror="this.remove()"></div>
+          <span class="tag">Limited</span>
+          <div class="product__actions"><button class="qv">Quick View</button><button class="add">Add to Bag</button></div>
+        </div>
+        <div class="product__info"><h3>Amara Kimono</h3><p class="price">KSh 5,900</p></div>
+        <ul class="swatches"><li style="--c:#D98A52" title="Amber"></li><li style="--c:#F1E9DA" title="Ivory"></li></ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- CATEGORIES -->
+<section class="section section--sand" id="categories">
+  <div class="wrap">
+    <header class="section__head reveal">
+      <p class="eyebrow">Shop by Category</p>
+      <h2>Find your silhouette</h2>
+    </header>
+    <div class="cats">
+      <a href="#collection" class="cat cat--a reveal"><div class="img" data-sil="abaya" data-tone="green"><img src="assets/img/cat-abayas.jpg" alt="" loading="lazy" onerror="this.remove()"></div><div class="cat__txt"><h3>Abayas</h3><p>Elegant silhouettes for everyday sophistication.</p><span>Shop →</span></div></a>
+      <a href="#collection" class="cat cat--b reveal"><div class="img" data-sil="dress" data-tone="clay"><img src="assets/img/cat-dresses.jpg" alt="" loading="lazy" onerror="this.remove()"></div><div class="cat__txt"><h3>Dresses</h3><p>Effortless pieces designed to move with you.</p><span>Shop →</span></div></a>
+      <a href="#collection" class="cat cat--c reveal"><div class="img" data-sil="coord" data-tone="ivory"><img src="assets/img/cat-coords.jpg" alt="" loading="lazy" onerror="this.remove()"></div><div class="cat__txt"><h3>Co-ords</h3><p>Modern sets made for effortless styling.</p><span>Shop →</span></div></a>
+      <a href="#collection" class="cat cat--d reveal"><div class="img" data-sil="hijab" data-tone="sand2"><img src="assets/img/cat-hijabs.jpg" alt="" loading="lazy" onerror="this.remove()"></div><div class="cat__txt"><h3>Hijabs</h3><p>Essential colors and textures for every wardrobe.</p><span>Shop →</span></div></a>
+    </div>
+  </div>
+</section>
+
+<!-- STORY -->
+<section class="story" id="story">
+  <div class="story__img reveal"><div class="img" data-sil="dress" data-tone="clay"><img src="assets/img/story.jpg" alt="AYRA atelier" loading="lazy" onerror="this.remove()"></div></div>
+  <div class="story__txt reveal">
+    <p class="eyebrow">Our Story</p>
+    <h2>Made for the way you live.</h2>
+    <p>AYRA was created around a simple idea: modest fashion should never feel limited.</p>
+    <p>We create thoughtfully designed pieces that combine comfort, confidence, and contemporary style—so you can dress modestly while still expressing who you are.</p>
+    <a href="#story" class="link">Discover Our Story <span>→</span></a>
+  </div>
+</section>
+
+<!-- LOOK -->
+<section class="look" id="look">
+  <div class="img look__img" data-sil="abaya" data-tone="green">
+    <img src="assets/img/look.jpg" alt="The AYRA Look: Sahara Abaya, silk modal hijab and leather mini bag" loading="lazy" onerror="this.remove()">
+  </div>
+  <div class="look__shade"></div>
+  <div class="look__head reveal">
+    <p class="eyebrow">The AYRA Look</p>
+    <h2>Effortless from morning to midnight.</h2>
+    <a href="#collection" class="btn btn--ivory">Shop the Look</a>
+  </div>
+  <button class="hotspot" style="--x:60%;--y:20%" aria-label="Silk Modal Hijab"><i></i><span><b>Silk Modal Hijab</b>KSh 1,800</span></button>
+  <button class="hotspot" style="--x:58%;--y:52%" aria-label="Sahara Abaya"><i></i><span><b>Sahara Abaya</b>KSh 8,500</span></button>
+  <button class="hotspot hotspot--left" style="--x:80%;--y:66%" aria-label="Leather Mini Bag"><i></i><span><b>Leather Mini Bag</b>KSh 4,500</span></button>
+</section>
+
+<!-- WHY -->
+<section class="section" id="why">
+  <div class="wrap">
+    <header class="section__head reveal"><p class="eyebrow">Why AYRA</p><h2>Considered, down to the stitch.</h2></header>
+    <div class="values">
+      <div class="value reveal"><span>01</span><h3>Thoughtful Design</h3><p>Every piece is designed with movement, comfort, and versatility in mind.</p></div>
+      <div class="value reveal"><span>02</span><h3>Quality First</h3><p>Selected fabrics and carefully considered construction.</p></div>
+      <div class="value reveal"><span>03</span><h3>Timeless Style</h3><p>Pieces designed to remain relevant beyond a single season.</p></div>
+      <div class="value reveal"><span>04</span><h3>Made With Intention</h3><p>Fashion that balances personal expression with modesty.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="section section--sand quotes">
+  <div class="wrap wrap--narrow">
+    <figure class="quote reveal"><blockquote>The quality is even better in person. The Sahara Abaya has become my favorite piece in my wardrobe.</blockquote><figcaption>Amina, Nairobi</figcaption></figure>
+    <figure class="quote quote--sm reveal"><blockquote>Finally, modest pieces that actually feel modern.</blockquote><figcaption>Hana, Mombasa</figcaption></figure>
+  </div>
+</section>
+
+<!-- SOCIAL -->
+<section class="section" id="social">
+  <div class="wrap">
+    <header class="section__head reveal"><p class="eyebrow">@ayrawear</p><h2>Follow the AYRA journey</h2></header>
+    <div class="grid reveal">
+      <a href="#social" class="img" data-sil="abaya" data-tone="green"><img src="assets/img/ig-1.jpg" alt="" loading="lazy" onerror="this.remove()"></a>
+      <a href="#social" class="img" data-sil="hijab" data-tone="sand"><img src="assets/img/ig-2.jpg" alt="" loading="lazy" onerror="this.remove()"></a>
+      <a href="#social" class="img" data-sil="dress" data-tone="clay"><img src="assets/img/ig-3.jpg" alt="" loading="lazy" onerror="this.remove()"></a>
+      <a href="#social" class="img" data-sil="coord" data-tone="ivory"><img src="assets/img/ig-4.jpg" alt="" loading="lazy" onerror="this.remove()"></a>
+      <a href="#social" class="img" data-sil="bag" data-tone="green"><img src="assets/img/ig-5.jpg" alt="" loading="lazy" onerror="this.remove()"></a>
+      <a href="#social" class="img" data-sil="abaya" data-tone="sand2"><img src="assets/img/ig-6.jpg" alt="" loading="lazy" onerror="this.remove()"></a>
+    </div>
+    <div class="center"><a href="#social" class="btn btn--green">Follow Us</a></div>
+  </div>
+</section>
+
+<!-- NEWSLETTER -->
+<section class="section section--sand news">
+  <div class="wrap wrap--narrow center reveal">
+    <h2>Be the first to know.</h2>
+    <p class="lede">New collections, limited drops, styling inspiration, and exclusive offers—straight to your inbox.</p>
+    <form class="news__form" id="newsForm" novalidate>
+      <input type="email" id="email" placeholder="Your email address" aria-label="Your email address" required>
+      <button class="btn btn--green" type="submit">Join AYRA</button>
+    </form>
+    <p class="news__msg" id="newsMsg" role="status"></p>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="cta">
+  <div class="wrap wrap--narrow center reveal">
+    <h2>Your wardrobe, elevated.</h2>
+    <p>Discover pieces designed for confidence, comfort, and effortless modesty.</p>
+    <a href="#collection" class="btn btn--orange">Shop the Collection →</a>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot__in">
+    <a href="#top" class="nav__logo">AYRA</a>
+    <p>Modesty, Reimagined.</p>
+    <p class="foot__c">© 2026 AYRA. Nairobi, Kenya.</p>
+  </div>
+</footer>
+
+<!-- Quick view -->
+<div class="modal" id="modal" hidden>
+  <div class="modal__box" role="dialog" aria-modal="true" aria-labelledby="mName">
+    <button class="modal__x" id="mClose" aria-label="Close">×</button>
+    <div class="img" id="mImg" data-sil="abaya" data-tone="sand"></div>
+    <div class="modal__txt">
+      <p class="eyebrow">Quick View</p>
+      <h3 id="mName"></h3><p class="price" id="mPrice"></p>
+      <p class="modal__d">Cut for movement and finished with considered details. Fits true to size; relaxed through the body.</p>
+      <div class="sizes" id="sizes"><button>XS</button><button>S</button><button class="on">M</button><button>L</button><button>XL</button></div>
+      <button class="btn btn--green" id="mAdd">Add to Bag</button>
+    </div>
+  </div>
+</div>
+<div class="toast" id="toast" role="status"></div>
+<script src="script.js"></script>
+</body>
+</html>
